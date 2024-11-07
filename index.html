@@ -452,6 +452,20 @@
                                         </div>
                                     </div>
                             `;
+                         document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const status = document.getElementById('email-status');
+                    status.innerHTML = 'Invio in corso...';
+
+                    emailjs.sendForm('service_nuujkxo', 'template_e7guzc4', this)
+                        .then(function () {
+                            status.innerHTML = 'Messaggio inviato con successo!';
+                            document.getElementById('contact-form').reset();
+                        }, function (error) {
+                            status.innerHTML = 'Errore nell\'invio del messaggio, riprova più tardi.';
+                        });
+                });
                         break;
                     default:
                         content.innerHTML = `<h2>Benvenuto</h2><p>Scopri i nostri splendidi rettili e il nostro cibo congelato per serpenti.</p>`;
@@ -460,25 +474,6 @@
                 content.classList.add('slide-up', 'show');
             }, 300);
         }
-
-    window.onload = function () {
-        emailjs.init("uFRwJarlOMZ067SKa");
-
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const status = document.getElementById('email-status');
-            status.innerHTML = 'Invio in corso...';
-
-            emailjs.sendForm('service_nuujkxo', 'template_e7guzc4', this)
-                .then(function () {
-                    status.innerHTML = 'Messaggio inviato con successo!';
-                    document.getElementById('contact-form').reset();
-                }, function (error) {
-                    status.innerHTML = 'Errore nell\'invio del messaggio, riprova più tardi.';
-                });
-        });
-    };
-
 
     </script>
 </body>
