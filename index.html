@@ -461,27 +461,24 @@
             }, 300);
         }
 
-        (function () {
-            emailjs.init("uFRwJarlOMZ067SKa"); //ID EmailJS
-        })();
+    window.onload = function () {
+        emailjs.init("uFRwJarlOMZ067SKa");
 
         document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
-
             const status = document.getElementById('email-status');
             status.innerHTML = 'Invio in corso...';
 
             emailjs.sendForm('service_nuujkxo', 'template_e7guzc4', this)
                 .then(function () {
                     status.innerHTML = 'Messaggio inviato con successo!';
-                    console.log("inviato");
                     document.getElementById('contact-form').reset();
                 }, function (error) {
                     status.innerHTML = 'Errore nell\'invio del messaggio, riprova più tardi.';
-                    console.log("non inviato");
-
                 });
         });
+    };
+
 
     </script>
 </body>
