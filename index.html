@@ -185,7 +185,100 @@
 
         #contact img:hover {
             transform: scale(1.2);
-        }
+        }/* Font e colori base */
+  body, html {
+    font-family: 'Poppins', sans-serif;
+    color: #3d3d3d;
+    background: #e9f0df;
+    margin: 0; padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  /* Container centrale */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  /* Titoli principali */
+  h2.display-5 {
+    color: #2a4d14;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  p.text-muted {
+    color: #6a7b52;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Accordion */
+  .accordion-button {
+    background-color: #c4dba6;
+    color: #2a4d14;
+    font-weight: 600;
+    font-size: 1.15rem;
+    border: none;
+    box-shadow: inset 0 -2px 0 #a4b876;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #9cb74f;
+    color: #1b2f07;
+    box-shadow: none;
+  }
+
+  .accordion-button::after {
+    filter: invert(40%) sepia(80%) saturate(500%) hue-rotate(65deg) brightness(85%);
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(90deg);
+  }
+
+  .accordion-body {
+    background-color: #f5f9e7;
+    color: #3d3d3d;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #a4b876;
+  }
+
+  /* Liste */
+  .accordion-body ul {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .accordion-body li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Immagine icona pitone */
+  .icon-snake {
+    display: block;
+    margin: 0 auto 20px;
+    width: 60px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 0 15px;
+      margin: 20px auto;
+    }
+    h2.display-5 {
+      font-size: 1.8rem;
+    }
+  }
     </style>
 </head>
 
@@ -533,129 +626,120 @@
                         break;
                         case 'care-guide':
     content.innerHTML = `
- <div class="container my-5">
-  <div class="bg-light rounded shadow p-4 animate__animated animate__fadeIn">
-    <div class="text-center mb-4">
-      <img src="Image/PythonRegius/icon_snake.svg" alt="Icona pitone" width="60">
-      <h2 class="fw-bold display-5 mt-3">Guida alla Stabulazione e Cura del Pitone Reale</h2>
-      <p class="text-muted">Cura, ambiente e alimentazione per un pitone sano e felice</p>
-    </div>
+<div class="container">
+  <img src="Image/PythonRegius/icon_snake.svg" alt="Icona pitone reale" class="icon-snake" />
+  <h2 class="display-5 text-center fw-bold">Guida alla Stabulazione e Cura del Pitone Reale</h2>
+  <p class="text-muted text-center">Cura, ambiente e alimentazione per un pitone sano e felice</p>
 
-    <div class="accordion" id="careGuideAccordion">
-      <!-- Sezione Obiettivo -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-            1. Obiettivo
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show">
-          <div class="accordion-body">
-            Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, che sia anche facile da gestire per chi lo alleva o lo tiene come animale da compagnia.
-          </div>
-        </div>
-      </div>
+  <div class="accordion" id="careGuideAccordion">
 
-      <!-- Sezione Box o Terrario -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-            2. Dove ospitarlo: Box o Terrario?
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
-            <strong>Terrario:</strong> estetico ma impegnativo. Minimo 100×60×50 cm.
-          </div>
-        </div>
-      </div>
-
-      <!-- Sezione Temperatura -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-            3. Temperatura
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            Zona calda: 31–32°C<br>
-            Zona fresca: 26–27°C<br>
-            Usa tappetini o cavi con termostato (sonda tra fonte e fondo).
-          </div>
-        </div>
-      </div>
-
-      <!-- Sezione Umidità e Acqua -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-            4. Umidità e Acqua
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            Umidità: 55–65%, in muta 70–75%<br>
-            Acqua sempre disponibile in ciotola grande e pulita.
-          </div>
-        </div>
-      </div>
-
-      <!-- Altri Punti -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-            5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
-          </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <ul>
-              <li><strong>Substrato:</strong> Scottex (cuccioli), Fibra di cocco (adulti)</li>
-              <li><strong>Arredi:</strong> 2 rifugi, rami bassi, foglie finte</li>
-              <li><strong>Pulizia:</strong> quotidiana (feci), settimanale (substrato), mensile (disinfezione)</li>
-              <li><strong>Quarantena:</strong> min. 60 giorni, con osservazioni</li>
-              <li><strong>Segnali salute:</strong> mute intere, appetito, calma, vigilanza</li>
-              <li><strong>Adattamenti:</strong> ogni esemplare è unico, osserva il comportamento</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Alimentazione -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-            Schema di Alimentazione
-          </button>
-        </h2>
-        <div id="collapseSix" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <strong>Frequenza pasti:</strong><br>
-            Baby: ogni 5–7 giorni<br>
-            Adulti: ogni 10–14 giorni<br><br>
-
-            <strong>Tipo di prede:</strong><br>
-            Cuccioli: pinkies / fuzzies<br>
-            Giovani: topi adulti piccoli / ratti baby<br>
-            Adulti: ratti adulti<br><br>
-
-            <strong>Modalità di somministrazione:</strong><br>
-            - Prede decongelate e riscaldate<br>
-            - Solo con pinze, mai a mano<br>
-            - Una preda per pasto, ripetere dopo 1–2 settimane se rifiuta<br><br>
-
-            <strong>Glossario:</strong><br>
-            <em>Pinkies:</em> topolini neonati senza pelo<br>
-            <em>Fuzzies:</em> topolini con poco pelo
-          </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. Obiettivo
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#careGuideAccordion">
+        <div class="accordion-body">
+          Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, facile da gestire per allevatori e appassionati.
         </div>
       </div>
     </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Dove ospitarlo: Box o Terrario?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#careGuideAccordion">
+        <div class="accordion-body">
+          <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
+          <strong>Terrario:</strong> più estetico ma richiede più manutenzione. Minimo 100×60×50 cm.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Temperatura
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#careGuideAccordion">
+        <div class="accordion-body">
+          Zona calda: 31–32°C<br>
+          Zona fresca: 26–27°C<br>
+          Usa tappetini o cavi con termostato (posiziona la sonda tra fonte calda e fondo).
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          4. Umidità e Acqua
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#careGuideAccordion">
+        <div class="accordion-body">
+          Umidità: 55–65%, durante la muta 70–75%<br>
+          Acqua sempre disponibile in una ciotola ampia e pulita.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#careGuideAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Substrato:</strong> Scottex per i cuccioli, fibra di cocco per adulti</li>
+            <li><strong>Arredi:</strong> almeno 2 rifugi, rami bassi e foglie finte</li>
+            <li><strong>Pulizia:</strong> quotidiana per feci, settimanale per substrato, mensile per disinfezione</li>
+            <li><strong>Quarantena:</strong> minimo 60 giorni con monitoraggio attento</li>
+            <li><strong>Segnali salute:</strong> mute complete, appetito regolare, comportamento calmo e vigile</li>
+            <li><strong>Adattamenti:</strong> ogni esemplare è diverso, osserva sempre il comportamento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Schema di Alimentazione
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#careGuideAccordion">
+        <div class="accordion-body">
+          <strong>Frequenza pasti:</strong><br>
+          Cuccioli: ogni 5–7 giorni<br>
+          Adulti: ogni 10–14 giorni<br><br>
+
+          <strong>Tipo di prede:</strong><br>
+          Cuccioli: pinkies / fuzzies<br>
+          Giovani: topi adulti piccoli / ratti baby<br>
+          Adulti: ratti adulti<br><br>
+
+          <strong>Modalità di somministrazione:</strong><br>
+          - Prede decongelate e riscaldate<br>
+          - Usa sempre pinze, mai a mano<br>
+          - Una preda per pasto, riprova dopo 1–2 settimane se rifiuta<br><br>
+
+          <strong>Glossario:</strong><br>
+          <em>Pinkies:</em> topolini neonati senza pelo<br>
+          <em>Fuzzies:</em> topolini con pelo leggero
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-
     `;
     break;
 
