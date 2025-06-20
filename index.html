@@ -205,8 +205,7 @@
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('available')">Rettili
                             disponibili</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('food')">Cibo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('cards')">Schede
-                            allevamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('care-guide')">Guida Pitone Reale</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('contact')">Contatti</a></li>
                 </ul>
             </div>
@@ -532,6 +531,91 @@
                                 </div>
                             </div>`;
                         break;
+                        case 'care-guide':
+    content.innerHTML = `
+    <div class="text-start p-4">
+        <h2 class="mb-4">Guida alla Stabulazione e Cura del Pitone Reale</h2>
+        <h4>1. Obiettivo</h4>
+        <p>Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, che sia anche facile da gestire per chi lo alleva o lo tiene come animale da compagnia.</p>
+
+        <h4>2. Dove ospitarlo: Box o Terrario?</h4>
+        <ul>
+            <li><strong>Rack:</strong> Ideale per allevatori, facile da pulire. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.</li>
+            <li><strong>Terrario:</strong> Estetico ma impegnativo. Misura consigliata per adulti: 100×60×50 cm.</li>
+        </ul>
+
+        <h4>3. Temperatura</h4>
+        <ul>
+            <li>Zona calda: 31–32°C</li>
+            <li>Zona fresca: 26–27°C</li>
+            <li>Usa tappetini o cavi con termostato (sonda tra fonte e fondo).</li>
+        </ul>
+
+        <h4>4. Umidità e Acqua</h4>
+        <ul>
+            <li>Normale: 55–65% / In muta: 70–75%</li>
+            <li>Acqua sempre disponibile e pulita, ciotola grande a sufficienza.</li>
+        </ul>
+
+        <h4>5. Substrato</h4>
+        <ul>
+            <li><strong>Scottex:</strong> per cuccioli/quarantena</li>
+            <li><strong>Fibra di cocco:</strong> per adulti, specialmente in muta</li>
+        </ul>
+
+        <h4>6. Nascondigli e Arredi</h4>
+        <ul>
+            <li>Minimo 2 rifugi (uno caldo, uno fresco)</li>
+            <li>Arredi sicuri: rami, cortecce, foglie finte</li>
+        </ul>
+
+        <h4>7. Pulizia</h4>
+        <ul>
+            <li>Giornaliera: feci/sporco</li>
+            <li>1–2 settimane: substrato</li>
+            <li>Mensile: disinfezione con F10 o clorexidina</li>
+        </ul>
+
+        <h4>8. Quarantena</h4>
+        <p>Separazione di almeno 60 giorni con osservazione comportamento, feci, muta e appetito.</p>
+
+        <h4>9. Segnali di Benessere</h4>
+        <ul>
+            <li>Mute complete, buon appetito, calma e vigilanza</li>
+        </ul>
+
+        <h4>10. Adattamenti individuali</h4>
+        <p>Ogni esemplare ha bisogni leggermente diversi. Osservalo e adatta l'ambiente.</p>
+
+        <h3 class="mt-5">Schema di Alimentazione</h3>
+        <h5>Frequenza dei Pasti</h5>
+        <ul>
+            <li>Baby: ogni 5–7 giorni</li>
+            <li>Adulti: ogni 10–14 giorni</li>
+        </ul>
+
+        <h5>Tipo di Prede</h5>
+        <ul>
+            <li>Baby: pinkies o fuzzies</li>
+            <li>Giovani: topi adulti piccoli o ratti baby</li>
+            <li>Adulti: ratti adulti</li>
+        </ul>
+
+        <h5>Come Somministrare</h5>
+        <ul>
+            <li>Solo prede decongelate, riscaldate, con pinze</li>
+            <li>1 preda per volta. Se rifiuta, attendi 1–2 settimane</li>
+        </ul>
+
+        <h5>Glossario</h5>
+        <ul>
+            <li><strong>Pinkies:</strong> topolini neonati</li>
+            <li><strong>Fuzzies:</strong> topolini leggermente pelosi</li>
+        </ul>
+    </div>
+    `;
+    break;
+
                     case 'contact':
                         content.innerHTML = `
                                 <section id="contact" class="container my-5">
