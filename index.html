@@ -533,86 +533,129 @@
                         break;
                         case 'care-guide':
     content.innerHTML = `
-    <div class="text-start p-4">
-        <h2 class="mb-4">Guida alla Stabulazione e Cura del Pitone Reale</h2>
-        <h4>1. Obiettivo</h4>
-        <p>Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, che sia anche facile da gestire per chi lo alleva o lo tiene come animale da compagnia.</p>
-
-        <h4>2. Dove ospitarlo: Box o Terrario?</h4>
-        <ul>
-            <li><strong>Rack:</strong> Ideale per allevatori, facile da pulire. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.</li>
-            <li><strong>Terrario:</strong> Estetico ma impegnativo. Misura consigliata per adulti: 100×60×50 cm.</li>
-        </ul>
-
-        <h4>3. Temperatura</h4>
-        <ul>
-            <li>Zona calda: 31–32°C</li>
-            <li>Zona fresca: 26–27°C</li>
-            <li>Usa tappetini o cavi con termostato (sonda tra fonte e fondo).</li>
-        </ul>
-
-        <h4>4. Umidità e Acqua</h4>
-        <ul>
-            <li>Normale: 55–65% / In muta: 70–75%</li>
-            <li>Acqua sempre disponibile e pulita, ciotola grande a sufficienza.</li>
-        </ul>
-
-        <h4>5. Substrato</h4>
-        <ul>
-            <li><strong>Scottex:</strong> per cuccioli/quarantena</li>
-            <li><strong>Fibra di cocco:</strong> per adulti, specialmente in muta</li>
-        </ul>
-
-        <h4>6. Nascondigli e Arredi</h4>
-        <ul>
-            <li>Minimo 2 rifugi (uno caldo, uno fresco)</li>
-            <li>Arredi sicuri: rami, cortecce, foglie finte</li>
-        </ul>
-
-        <h4>7. Pulizia</h4>
-        <ul>
-            <li>Giornaliera: feci/sporco</li>
-            <li>1–2 settimane: substrato</li>
-            <li>Mensile: disinfezione con F10 o clorexidina</li>
-        </ul>
-
-        <h4>8. Quarantena</h4>
-        <p>Separazione di almeno 60 giorni con osservazione comportamento, feci, muta e appetito.</p>
-
-        <h4>9. Segnali di Benessere</h4>
-        <ul>
-            <li>Mute complete, buon appetito, calma e vigilanza</li>
-        </ul>
-
-        <h4>10. Adattamenti individuali</h4>
-        <p>Ogni esemplare ha bisogni leggermente diversi. Osservalo e adatta l'ambiente.</p>
-
-        <h3 class="mt-5">Schema di Alimentazione</h3>
-        <h5>Frequenza dei Pasti</h5>
-        <ul>
-            <li>Baby: ogni 5–7 giorni</li>
-            <li>Adulti: ogni 10–14 giorni</li>
-        </ul>
-
-        <h5>Tipo di Prede</h5>
-        <ul>
-            <li>Baby: pinkies o fuzzies</li>
-            <li>Giovani: topi adulti piccoli o ratti baby</li>
-            <li>Adulti: ratti adulti</li>
-        </ul>
-
-        <h5>Come Somministrare</h5>
-        <ul>
-            <li>Solo prede decongelate, riscaldate, con pinze</li>
-            <li>1 preda per volta. Se rifiuta, attendi 1–2 settimane</li>
-        </ul>
-
-        <h5>Glossario</h5>
-        <ul>
-            <li><strong>Pinkies:</strong> topolini neonati</li>
-            <li><strong>Fuzzies:</strong> topolini leggermente pelosi</li>
-        </ul>
+ <div class="container my-5">
+  <div class="bg-light rounded shadow p-4 animate__animated animate__fadeIn">
+    <div class="text-center mb-4">
+      <img src="Image/PythonRegius/icon_snake.svg" alt="Icona pitone" width="60">
+      <h2 class="fw-bold display-5 mt-3">Guida alla Stabulazione e Cura del Pitone Reale</h2>
+      <p class="text-muted">Cura, ambiente e alimentazione per un pitone sano e felice</p>
     </div>
+
+    <div class="accordion" id="careGuideAccordion">
+      <!-- Sezione Obiettivo -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            1. Obiettivo
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, che sia anche facile da gestire per chi lo alleva o lo tiene come animale da compagnia.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sezione Box o Terrario -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            2. Dove ospitarlo: Box o Terrario?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
+            <strong>Terrario:</strong> estetico ma impegnativo. Minimo 100×60×50 cm.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sezione Temperatura -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            3. Temperatura
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Zona calda: 31–32°C<br>
+            Zona fresca: 26–27°C<br>
+            Usa tappetini o cavi con termostato (sonda tra fonte e fondo).
+          </div>
+        </div>
+      </div>
+
+      <!-- Sezione Umidità e Acqua -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            4. Umidità e Acqua
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Umidità: 55–65%, in muta 70–75%<br>
+            Acqua sempre disponibile in ciotola grande e pulita.
+          </div>
+        </div>
+      </div>
+
+      <!-- Altri Punti -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <ul>
+              <li><strong>Substrato:</strong> Scottex (cuccioli), Fibra di cocco (adulti)</li>
+              <li><strong>Arredi:</strong> 2 rifugi, rami bassi, foglie finte</li>
+              <li><strong>Pulizia:</strong> quotidiana (feci), settimanale (substrato), mensile (disinfezione)</li>
+              <li><strong>Quarantena:</strong> min. 60 giorni, con osservazioni</li>
+              <li><strong>Segnali salute:</strong> mute intere, appetito, calma, vigilanza</li>
+              <li><strong>Adattamenti:</strong> ogni esemplare è unico, osserva il comportamento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alimentazione -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+            Schema di Alimentazione
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <strong>Frequenza pasti:</strong><br>
+            Baby: ogni 5–7 giorni<br>
+            Adulti: ogni 10–14 giorni<br><br>
+
+            <strong>Tipo di prede:</strong><br>
+            Cuccioli: pinkies / fuzzies<br>
+            Giovani: topi adulti piccoli / ratti baby<br>
+            Adulti: ratti adulti<br><br>
+
+            <strong>Modalità di somministrazione:</strong><br>
+            - Prede decongelate e riscaldate<br>
+            - Solo con pinze, mai a mano<br>
+            - Una preda per pasto, ripetere dopo 1–2 settimane se rifiuta<br><br>
+
+            <strong>Glossario:</strong><br>
+            <em>Pinkies:</em> topolini neonati senza pelo<br>
+            <em>Fuzzies:</em> topolini con poco pelo
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     `;
     break;
 
