@@ -274,7 +274,9 @@
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('available')">Rettili
                             disponibili</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('food')">Cibo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('care-guide')">Guida Pitone Reale</a></li>
+<li class="nav-item">
+  <a class="nav-link" href="#" onclick="loadSection('care-guide')">Guide Cura Rettili</a>
+</li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('contact')">Contatti</a></li>
                 </ul>
             </div>
@@ -613,14 +615,21 @@
                         break;
                         case 'care-guide':
     content.innerHTML = `
-<div class="container">
-  <img src="Image/logo.png" alt="Icona pitone reale" class="icon-snake" />
-  <h2 class="display-5 text-center fw-bold">Guida alla Stabulazione e Cura del Pitone Reale</h2>
-  <p class="text-muted text-center">Cura, ambiente e alimentazione per un pitone sano e felice</p>
+  <div class="container">
+    <h2 class="display-5 text-center fw-bold mb-4">Guide Cura Rettili</h2>
 
-  <div class="accordion" id="careGuideAccordion">
+    <div class="accordion" id="careGuideAccordion">
 
-    <div class="accordion-item">
+      <!-- Pitone Reale -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="pythonRegiusHeader">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pythonRegius" aria-expanded="true" aria-controls="pythonRegius">
+            🐍 Guida alla Cura del Pitone Reale (Python regius)
+          </button>
+        </h2>
+        <div id="pythonRegius" class="accordion-collapse collapse show" aria-labelledby="pythonRegiusHeader" data-bs-parent="#careGuideAccordion">
+          <div class="accordion-body">
+   <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           1. Obiettivo
@@ -727,6 +736,61 @@
 
   </div>
 </div>
+
+
+
+          </div>
+        </div>
+      </div>
+
+      
+  <!-- Guttatus -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="guttatusHeader">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guttatus" aria-expanded="false" aria-controls="guttatus">
+            🐍 Guida alla Cura del Serpente del Grano (Pantherophis guttatus)
+          </button>
+        </h2>
+        <div id="guttatus" class="accordion-collapse collapse" aria-labelledby="guttatusHeader" data-bs-parent="#careGuideAccordion">
+          <div class="accordion-body">
+            <h5>1. Allestimento del Terrario</h5>
+            <ul>
+              <li>Cuccioli: min. 45x30x30 cm</li>
+              <li>Adulti: min. 90x45x45 cm</li>
+              <li>Substrato: aspen, cocco, carta, NO pino/cedro</li>
+              <li>Nascondigli obbligatori (zona calda + fredda)</li>
+              <li>Decorazioni: rami, cortecce, piante</li>
+            </ul>
+
+            <h5>2. Temperatura e Umidità</h5>
+            <ul>
+              <li>Zona calda: 29–31 °C | fredda: 21–25 °C | notte: 18–20 °C</li>
+              <li>Umidità: 50–60%, 65–75% in muta</li>
+              <li>Usare termostato, termometri e igrometro</li>
+            </ul>
+
+            <h5>3. Alimentazione</h5>
+            <ul>
+              <li>Prede scongelate (topi o pulcini)</li>
+              <li>Cuccioli: ogni 5–7 giorni | Adulti: ogni 7–14</li>
+              <li>Mai prede vive, meglio somministrare in box separato</li>
+            </ul>
+
+            <h5>4. Muta</h5>
+            <p>Durante la muta offri più umidità e non manipolarlo. Verifica che la pelle venga via completamente.</p>
+
+            <h5>5. Manipolazione</h5>
+            <p>Attendi 5–7 giorni post acquisto. Mai toccare entro 24h dopo un pasto. Movimenti lenti e delicati.</p>
+
+            <h5>6. Pulizia</h5>
+            <p>Rimuovi feci ogni giorno, pulizia totale ogni mese con disinfettante per rettili.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>`;
+    
     `;
     break;
 
