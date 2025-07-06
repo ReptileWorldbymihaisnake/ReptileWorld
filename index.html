@@ -185,76 +185,79 @@
 
         #contact img:hover {
             transform: scale(1.2);
-        }/* Font e colori base */
+        }
+
+        /* Font e colori base */
 
 
 
 
-  /* Accordion */
-  .accordion-button {
-    background-color: #c4dba6;
-    color: #2a4d14;
-    font-weight: 600;
-    font-size: 1.15rem;
-    border: none;
-    box-shadow: inset 0 -2px 0 #a4b876;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
+        /* Accordion */
+        .accordion-button {
+            background-color: #c4dba6;
+            color: #2a4d14;
+            font-weight: 600;
+            font-size: 1.15rem;
+            border: none;
+            box-shadow: inset 0 -2px 0 #a4b876;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
 
-  .accordion-button:not(.collapsed) {
-    background-color: #9cb74f;
-    color: #1b2f07;
-    box-shadow: none;
-  }
+        .accordion-button:not(.collapsed) {
+            background-color: #9cb74f;
+            color: #1b2f07;
+            box-shadow: none;
+        }
 
-  .accordion-button::after {
-    filter: invert(40%) sepia(80%) saturate(500%) hue-rotate(65deg) brightness(85%);
-    transition: transform 0.3s ease;
-  }
+        .accordion-button::after {
+            filter: invert(40%) sepia(80%) saturate(500%) hue-rotate(65deg) brightness(85%);
+            transition: transform 0.3s ease;
+        }
 
-  .accordion-button:not(.collapsed)::after {
-    transform: rotate(90deg);
-  }
+        .accordion-button:not(.collapsed)::after {
+            transform: rotate(90deg);
+        }
 
-  .accordion-body {
-    background-color: #f5f9e7;
-    color: #3d3d3d;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #a4b876;
-  }
+        .accordion-body {
+            background-color: #f5f9e7;
+            color: #3d3d3d;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #a4b876;
+        }
 
-  /* Liste */
-  .accordion-body ul {
-    padding-left: 1.2rem;
-    margin: 0;
-  }
+        /* Liste */
+        .accordion-body ul {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
 
-  .accordion-body li {
-    margin-bottom: 0.5rem;
-  }
+        .accordion-body li {
+            margin-bottom: 0.5rem;
+        }
 
-  /* Immagine icona pitone */
-  .icon-snake {
-    display: block;
-    margin: 0 auto 20px;
-    width: 60px;
-    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
-  }
+        /* Immagine icona pitone */
+        .icon-snake {
+            display: block;
+            margin: 0 auto 20px;
+            width: 60px;
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+        }
 
-  /* Responsive */
-  @media (max-width: 600px) {
-    .container {
-      padding: 0 15px;
-      margin: 20px auto;
-    }
-    h2.display-5 {
-      font-size: 1.8rem;
-    }
-  }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+                margin: 20px auto;
+            }
+
+            h2.display-5 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -274,9 +277,8 @@
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('available')">Rettili
                             disponibili</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('food')">Cibo</a></li>
-<li class="nav-item">
-  <a class="nav-link" href="#" onclick="loadSection('care-guide')">Guide Cura Rettili</a>
-</li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('care-guide')">Guida Pitone
+                            Reale</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" onclick="loadSection('contact')">Contatti</a></li>
                 </ul>
             </div>
@@ -325,193 +327,207 @@
                 switch (section) {
                     case 'breeders':
                         content.innerHTML = `
-                        <div class="container">
-  <h2 class="my-4">Pitone Reale</h2>
+                                <div class="container">
+                                <h2 class="my-4">Pitone Reale</h2>
 
-  <h4 class="text-success mt-3">Femmine</h4>
-  <div class="row">
-                            <div class="row align-items-stretch">
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                <h4 class="text-success mt-3">Femmine</h4>
+                                <div class="row">
+                                    <div class="row align-items-stretch">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0.1_Butter_Pastel_Enchi.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Butter Pastel Enchi</p>
-                                            <p class="card-text">Presenta una colorazione vibrante e complessa, caratterizzata da sfumature giallo-dorate e marrone chiaro</p>
+                                            <p class="card-text">Presenta una colorazione vibrante e complessa, caratterizzata da sfumature
+                                            giallo-dorate e marrone chiaro</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0.1_Dinker.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Dinker</p>
-                                            <p class="card-text">Caratterizzato da variazioni insolite nel pattern e nelle sfumature che possono spaziare dal marrone scuro al beige, con effetti marmorizzati e bordi sfumati.</p>
+                                            <p class="card-text">Caratterizzato da variazioni insolite nel pattern e nelle sfumature che possono
+                                            spaziare dal marrone scuro al beige, con effetti marmorizzati e bordi sfumati.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0.1_Pastel_Mojave.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Pastel Mojave Cinnamon 66% Het Pied</p>
-                                            <p class="card-text">Combina colori ricchi e contrastanti, con toni dorati e grigi miscelati al marrone caldo</p>
+                                            <p class="card-text">Combina colori ricchi e contrastanti, con toni dorati e grigi miscelati al marrone
+                                            caldo</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0.1_enchi_pastel_ultramel.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Enchi Pastel Het Ultramel</p>
-                                            <p class="card-text">Morph dal colore caldo e brillante, con disegni più puliti e vibranti, portatore del gene recessivo Ultramel.</p>
+                                            <p class="card-text">Morph dal colore caldo e brillante, con disegni più puliti e vibranti, portatore del
+                                            gene recessivo Ultramel.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0.1_black_pastel_yb.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Black Pastel Yellowbelly</p>
-                                            <p class="card-text">Colorazione scura e intensa con sfumature ricche, arricchita da un ventre chiaro e pattern accesi grazie al gene Yellowbelly.</p>
+                                            <p class="card-text">Colorazione scura e intensa con sfumature ricche, arricchita da un ventre chiaro e
+                                            pattern accesi grazie al gene Yellowbelly.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
 
-
-      </div>
-
-        <h4 class="text-primary mt-4">Maschi</h4>
-  <div class="row">
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    </div>
+                                    <h4 class="text-primary mt-4">Maschi</h4>
+                                    <div class="row">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_banana_butter.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Banana Butter 100% Het Clown</p>
-                                            <p class="card-text">Sfoggia una combinazione di colori vivaci con toni giallo acceso e crema, arricchiti da lievi sfumature arancioni e lavanda</p>
+                                            <p class="card-text">Sfoggia una combinazione di colori vivaci con toni giallo acceso e crema, arricchiti da
+                                            lievi sfumature arancioni e lavanda</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_Mahogany_Harlequin_Fire.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Mahogany Harlequin Fire</p>
-                                            <p class="card-text">Offre una colorazione scura e calda, con tonalità di marrone intenso e accenti rossastri, arricchito dal gene Fire che illumina il pattern e dona sfumature contrastanti</p>
+                                            <p class="card-text">Offre una colorazione scura e calda, con tonalità di marrone intenso e accenti
+                                            rossastri, arricchito dal gene Fire che illumina il pattern e dona sfumature contrastanti</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
-                                        <img src="Image/PythonRegius/1.0_purple_cinnamon_ghi_Mojave_het_pied.jpg" class="card-img-top" alt="PythonRegius">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
+                                        <img src="Image/PythonRegius/1.0_purple_cinnamon_ghi_Mojave_het_pied.jpg" class="card-img-top"
+                                            alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Purple Cinnamon Ghi Mojave Het Pied</p>
-                                            <p class="card-text">Una combinazione affascinante di toni viola scuro e marrone intenso, con accenti grigi</p>
+                                            <p class="card-text">Una combinazione affascinante di toni viola scuro e marrone intenso, con accenti grigi
+                                            </p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_champagneyb_pastel.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Champagne YellowBelly Pastel Trick</p>
-                                            <p class="card-text">Morph molto chiaro e omogeneo, con influenze pastello e contrasti insoliti dati dal gene Trick e dal ventre acceso del Yellowbelly.</p>
+                                            <p class="card-text">Morph molto chiaro e omogeneo, con influenze pastello e contrasti insoliti dati dal
+                                            gene Trick e dal ventre acceso del Yellowbelly.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_enchi_pastel_clown.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Enchi Pastel Clown</p>
-                                            <p class="card-text">Colori intensi e disegni ben definiti, combinati con il gene Clown che crea pattern unici e sorprendenti.</p>
+                                            <p class="card-text">Colori intensi e disegni ben definiti, combinati con il gene Clown che crea pattern
+                                            unici e sorprendenti.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_Bongo_het_clown.jpg" class="card-img-top" alt="PythonRegius">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Bongo Het Clown</p>
-                                            <p class="card-text">Base marrone scuro con pattern intricati, portatore del gene recessivo Clown che può trasmettere disegni spettacolari alla prole.</p>
+                                            <p class="card-text">Base marrone scuro con pattern intricati, portatore del gene recessivo Clown che può
+                                            trasmettere disegni spettacolari alla prole.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
 
 
-  </div>
+                                    </div>
 
-                <h2 class="my-4">Boa Constrictor</h2>
+                                    <h2 class="my-4">Boa Constrictor</h2>
 
-  <h4 class="text-success mt-3">Femmine</h4>
-  <div class="row">
-                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <h4 class="text-success mt-3">Femmine</h4>
+                                    <div class="row">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0.1_Hypo_fire_key.jpg" class="card-img-top" alt="Boa">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Hypo Fire Key West</p>
-                                            <p class="card-text">Colorazione calda e brillante con pattern ridotti, arricchita da toni rossastri e sfumature intense del gene Fire.</p>
+                                            <p class="card-text">Colorazione calda e brillante con pattern ridotti, arricchita da toni rossastri e
+                                            sfumature intense del gene Fire.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/0,1_super_hypo_het_anery.jpg" class="card-img-top" alt="Boa">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Super Hypo Het Anery Albino Sharph Snowglow</p>
-                                            <p class="card-text">Morph molto chiaro e pulito, portatore di geni recessivi che possono generare boa senza pigmenti scuri o con colorazioni pastello.</p>
+                                            <p class="card-text">Morph molto chiaro e pulito, portatore di geni recessivi che possono generare boa senza
+                                            pigmenti scuri o con colorazioni pastello.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
 
-  </div>
+                                    </div>
 
-  <h4 class="text-primary mt-4">Maschi</h4>
-  <div class="row">
-                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <h4 class="text-primary mt-4">Maschi</h4>
+                                    <div class="row">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_hypo_jungle.jpg" class="card-img-top" alt="Boa">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Hypo Jungle Img</p>
-                                            <p class="card-text">Colore scuro che tende a diventare nero con l'età (IMG), combinato con pattern irregolari e contrastati tipici del Jungle.</p>
+                                            <p class="card-text">Colore scuro che tende a diventare nero con l'età (IMG), combinato con pattern
+                                            irregolari e contrastati tipici del Jungle.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
-                                                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_Hypo_motley_Anery.jpg" class="card-img-top" alt="Boa">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Hypo Motley Het Anery - possibile: Fire Het Albino</p>
-                                            <p class="card-text">Pattern a nastro con colori attenuati, portatore di geni recessivi che possono trasmettere morph ancora più rari e chiari.</p>
+                                            <p class="card-text">Pattern a nastro con colori attenuati, portatore di geni recessivi che possono
+                                            trasmettere morph ancora più rari e chiari.</p>
+                                        </div>
                                         </div>
                                     </div>
-                                </div>
 
-  </div>
+                                    </div>
 
-  <h2 class="my-4">Pitone Moluro</h2>
+                                    <h2 class="my-4">Pitone Moluro</h2>
 
-  <h4 class="text-success mt-3">Femmine</h4>
-  <div class="row">
+                                    <h4 class="text-success mt-3">Femmine</h4>
+                                    <div class="row">
 
-    
-  </div>
 
-  <h4 class="text-primary mt-4">Maschi</h4>
-  <div class="row">
-                                                                                                <div class="col-md-4 d-flex py-4">
-                                    <div class="card mb-4 shadow-sm">
+                                    </div>
+
+                                    <h4 class="text-primary mt-4">Maschi</h4>
+                                    <div class="row">
+                                    <div class="col-md-4 d-flex py-4">
+                                        <div class="card mb-4 shadow-sm">
                                         <img src="Image/PythonRegius/1.0_hypo_paradox_het_granit_champagne.jpg" class="card-img-top" alt="Moluro">
                                         <div class="card-body">
                                             <p class="card-text">Morph: Hypo Paradox Het Granit Champagne</p>
-                                            <p class="card-text">Morph chiaro e irregolare con chiazze scure “a sorpresa” (Paradox), portatore di mutazioni che influenzano pattern e colore in modo marcato.</p>
+                                            <p class="card-text">Morph chiaro e irregolare con chiazze scure “a sorpresa” (Paradox), portatore di
+                                            mutazioni che influenzano pattern e colore in modo marcato.</p>
+                                        </div>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
-  </div>
-</div>
-
-                            </div>`;
+                                </div>`;
                         break;
                     case 'available':
                         content.innerHTML = `
@@ -573,7 +589,7 @@
                                         </div>
                                     </div>
                                 </div>
-<div class="col-md-4 py-4">
+                                <div class="col-md-4 py-4">
                                     <div class="card mb-4 shadow-sm ">
                                         <img src="https://media.istockphoto.com/id/1181618454/it/vettoriale/timbro-grunge-esaurito-isolato-su-sfondo-bianco-immagine-illustrazione-vettoriale.jpg?s=612x612&w=0&k=20&c=XVLIhHOsJZ7DMH5VSOkH5XEEsKKNYC-Bcw8yLb9yeuw=" class="card-img-top" alt="Baby Boa">
                                         <div class="card-body">
@@ -583,7 +599,7 @@
                                         </div>
                                     </div>
                                 </div>
-<div class="col-md-4 py-4">
+                                <div class="col-md-4 py-4">
                                     <div class="card mb-4 shadow-sm ">
                                         <img src="https://media.istockphoto.com/id/1181618454/it/vettoriale/timbro-grunge-esaurito-isolato-su-sfondo-bianco-immagine-illustrazione-vettoriale.jpg?s=612x612&w=0&k=20&c=XVLIhHOsJZ7DMH5VSOkH5XEEsKKNYC-Bcw8yLb9yeuw=" class="card-img-top" alt="Baby Boa">
                                         <div class="card-body">
@@ -613,9 +629,10 @@
                                 </div>
                             </div>`;
                         break;
-                        case 'care-guide':
-    content.innerHTML = `
-  <div class="container">
+                    case 'care-guide':
+                        content.innerHTML = `
+
+                          <div class="container">
     <h2 class="display-5 text-center fw-bold mb-4">Guide Cura Rettili</h2>
 
     <div class="accordion" id="careGuideAccordion">
@@ -629,170 +646,129 @@
         </h2>
         <div id="pythonRegius" class="accordion-collapse collapse show" aria-labelledby="pythonRegiusHeader" data-bs-parent="#careGuideAccordion">
           <div class="accordion-body">
-   <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          1. Obiettivo
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#careGuideAccordion">
-        <div class="accordion-body">
-          Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, facile da gestire per allevatori e appassionati.
-        </div>
-      </div>
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingOne">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+      aria-expanded="true" aria-controls="collapseOne">
+      1. Obiettivo
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+    data-bs-parent="#careGuideAccordion">
+    <div class="accordion-body">
+      Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, facile da gestire per
+      allevatori e appassionati.
     </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          2. Dove ospitarlo: Box o Terrario?
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#careGuideAccordion">
-        <div class="accordion-body">
-          <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
-          <strong>Terrario:</strong> più estetico ma richiede più manutenzione. Minimo 100×60×50 cm.
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          3. Temperatura
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#careGuideAccordion">
-        <div class="accordion-body">
-          Zona calda: 31–32°C<br>
-          Zona fresca: 26–27°C<br>
-          Usa tappetini o cavi con termostato (posiziona la sonda tra fonte calda e fondo).
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          4. Umidità e Acqua
-        </button>
-      </h2>
-      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#careGuideAccordion">
-        <div class="accordion-body">
-          Umidità: 55–65%, durante la muta 70–75%<br>
-          Acqua sempre disponibile in una ciotola ampia e pulita.
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFive">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
-        </button>
-      </h2>
-      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#careGuideAccordion">
-        <div class="accordion-body">
-          <ul>
-            <li><strong>Substrato:</strong> Scottex per i cuccioli, fibra di cocco per adulti</li>
-            <li><strong>Arredi:</strong> almeno 2 rifugi, rami bassi e foglie finte</li>
-            <li><strong>Pulizia:</strong> quotidiana per feci, settimanale per substrato, mensile per disinfezione</li>
-            <li><strong>Quarantena:</strong> minimo 60 giorni con monitoraggio attento</li>
-            <li><strong>Segnali salute:</strong> mute complete, appetito regolare, comportamento calmo e vigile</li>
-            <li><strong>Adattamenti:</strong> ogni esemplare è diverso, osserva sempre il comportamento</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingSix">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          Schema di Alimentazione
-        </button>
-      </h2>
-      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#careGuideAccordion">
-        <div class="accordion-body">
-          <strong>Frequenza pasti:</strong><br>
-          Cuccioli: ogni 5–7 giorni<br>
-          Adulti: ogni 10–14 giorni<br><br>
-
-          <strong>Tipo di prede:</strong><br>
-          Cuccioli: pinkies / fuzzies<br>
-          Giovani: topi adulti piccoli / ratti baby<br>
-          Adulti: ratti adulti<br><br>
-
-          <strong>Modalità di somministrazione:</strong><br>
-          - Prede decongelate e riscaldate<br>
-          - Usa sempre pinze, mai a mano<br>
-          - Una preda per pasto, riprova dopo 1–2 settimane se rifiuta<br><br>
-
-          <strong>Glossario:</strong><br>
-          <em>Pinkies:</em> topolini neonati senza pelo<br>
-          <em>Fuzzies:</em> topolini con pelo leggero
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
-
-
-          </div>
-        </div>
-      </div>
-
-      
-  <!-- Guttatus -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="guttatusHeader">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guttatus" aria-expanded="false" aria-controls="guttatus">
-            🐍 Guida alla Cura del Serpente del Grano (Pantherophis guttatus)
-          </button>
-        </h2>
-        <div id="guttatus" class="accordion-collapse collapse" aria-labelledby="guttatusHeader" data-bs-parent="#careGuideAccordion">
-          <div class="accordion-body">
-            <h5>1. Allestimento del Terrario</h5>
-            <ul>
-              <li>Cuccioli: min. 45x30x30 cm</li>
-              <li>Adulti: min. 90x45x45 cm</li>
-              <li>Substrato: aspen, cocco, carta, NO pino/cedro</li>
-              <li>Nascondigli obbligatori (zona calda + fredda)</li>
-              <li>Decorazioni: rami, cortecce, piante</li>
-            </ul>
-
-            <h5>2. Temperatura e Umidità</h5>
-            <ul>
-              <li>Zona calda: 29–31 °C | fredda: 21–25 °C | notte: 18–20 °C</li>
-              <li>Umidità: 50–60%, 65–75% in muta</li>
-              <li>Usare termostato, termometri e igrometro</li>
-            </ul>
-
-            <h5>3. Alimentazione</h5>
-            <ul>
-              <li>Prede scongelate (topi o pulcini)</li>
-              <li>Cuccioli: ogni 5–7 giorni | Adulti: ogni 7–14</li>
-              <li>Mai prede vive, meglio somministrare in box separato</li>
-            </ul>
-
-            <h5>4. Muta</h5>
-            <p>Durante la muta offri più umidità e non manipolarlo. Verifica che la pelle venga via completamente.</p>
-
-            <h5>5. Manipolazione</h5>
-            <p>Attendi 5–7 giorni post acquisto. Mai toccare entro 24h dopo un pasto. Movimenti lenti e delicati.</p>
-
-            <h5>6. Pulizia</h5>
-            <p>Rimuovi feci ogni giorno, pulizia totale ogni mese con disinfettante per rettili.</p>
-          </div>
-        </div>
-      </div>
-
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingTwo">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+      aria-expanded="false" aria-controls="collapseTwo">
+      2. Dove ospitarlo: Box o Terrario?
+    </button>
+  </h2>
+  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+    data-bs-parent="#careGuideAccordion">
+    <div class="accordion-body">
+      <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
+      <strong>Terrario:</strong> più estetico ma richiede più manutenzione. Minimo 100×60×50 cm.
     </div>
-  </div>`;
-    
-    `;
-    break;
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingThree">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+      aria-expanded="false" aria-controls="collapseThree">
+      3. Temperatura
+    </button>
+  </h2>
+  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+    data-bs-parent="#careGuideAccordion">
+    <div class="accordion-body">
+      Zona calda: 31–32°C<br>
+      Zona fresca: 26–27°C<br>
+      Usa tappetini o cavi con termostato (posiziona la sonda tra fonte calda e fondo).
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingFour">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+      aria-expanded="false" aria-controls="collapseFour">
+      4. Umidità e Acqua
+    </button>
+  </h2>
+  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+    data-bs-parent="#careGuideAccordion">
+    <div class="accordion-body">
+      Umidità: 55–65%, durante la muta 70–75%<br>
+      Acqua sempre disponibile in una ciotola ampia e pulita.
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingFive">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+      aria-expanded="false" aria-controls="collapseFive">
+      5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
+    </button>
+  </h2>
+  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+    data-bs-parent="#careGuideAccordion">
+    <div class="accordion-body">
+      <ul>
+        <li><strong>Substrato:</strong> Scottex per i cuccioli, fibra di cocco per adulti</li>
+        <li><strong>Arredi:</strong> almeno 2 rifugi, rami bassi e foglie finte</li>
+        <li><strong>Pulizia:</strong> quotidiana per feci, settimanale per substrato, mensile per disinfezione</li>
+        <li><strong>Quarantena:</strong> minimo 60 giorni con monitoraggio attento</li>
+        <li><strong>Segnali salute:</strong> mute complete, appetito regolare, comportamento calmo e vigile</li>
+        <li><strong>Adattamenti:</strong> ogni esemplare è diverso, osserva sempre il comportamento</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="accordion-item">
+  <h2 class="accordion-header" id="headingSix">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+      aria-expanded="false" aria-controls="collapseSix">
+      Schema di Alimentazione
+    </button>
+  </h2>
+  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+    data-bs-parent="#careGuideAccordion">
+    <div class="accordion-body">
+      <strong>Frequenza pasti:</strong><br>
+      Cuccioli: ogni 5–7 giorni<br>
+      Adulti: ogni 10–14 giorni<br><br>
+
+      <strong>Tipo di prede:</strong><br>
+      Cuccioli: pinkies / fuzzies<br>
+      Giovani: topi adulti piccoli / ratti baby<br>
+      Adulti: ratti adulti<br><br>
+
+      <strong>Modalità di somministrazione:</strong><br>
+      - Prede decongelate e riscaldate<br>
+      - Usa sempre pinze, mai a mano<br>
+      - Una preda per pasto, riprova dopo 1–2 settimane se rifiuta<br><br>
+
+      <strong>Glossario:</strong><br>
+      <em>Pinkies:</em> topolini neonati senza pelo<br>
+      <em>Fuzzies:</em> topolini con pelo leggero
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+                                        
+        `;
+                        break;
 
                     case 'contact':
                         content.innerHTML = `
