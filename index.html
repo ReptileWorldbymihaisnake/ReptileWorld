@@ -631,189 +631,244 @@
                         break;
                     case 'care-guide':
                         content.innerHTML = `
+<div class="container">
+  <h2 class="display-5 text-center fw-bold mb-4">Guide Cura Rettili</h2>
 
-                          <div class="container">
-    <h2 class="display-5 text-center fw-bold mb-4">Guide Cura Rettili</h2>
+  <div class="accordion" id="careGuideAccordion">
+    <!-- Pitone Reale -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="pythonRegiusHeader">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pythonRegius"
+          aria-expanded="true" aria-controls="pythonRegius">
+          🐍 Guida alla Cura del Pitone Reale (Python regius)
+        </button>
+      </h2>
+      <div id="pythonRegius" class="accordion-collapse collapse show" aria-labelledby="pythonRegiusHeader">
+        <div class="accordion-body">
+          <div class="accordion" id="pythonGuide">
 
-    <div class="accordion" id="careGuideAccordion">
+            <!-- Ogni punto come item interno -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regiusOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#regiusCollapseOne" aria-expanded="true" aria-controls="regiusCollapseOne">
+                  1. Obiettivo
+                </button>
+              </h2>
+              <div id="regiusCollapseOne" class="accordion-collapse collapse show" aria-labelledby="regiusOne"
+                data-bs-parent="#pythonGuide">
+                <div class="accordion-body">
+                  Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, facile da gestire per
+                  allevatori e appassionati.
+                </div>
+              </div>
+            </div>
 
-      <!-- Pitone Reale -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="pythonRegiusHeader">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pythonRegius" aria-expanded="true" aria-controls="pythonRegius">
-            🐍 Guida alla Cura del Pitone Reale (Python regius)
-          </button>
-        </h2>
-        <div id="pythonRegius" class="accordion-collapse collapse show" aria-labelledby="pythonRegiusHeader" data-bs-parent="#careGuideAccordion">
-          <div class="accordion-body">
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingOne">
-    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-      aria-expanded="true" aria-controls="collapseOne">
-      1. Obiettivo
-    </button>
-  </h2>
-  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-    data-bs-parent="#careGuideAccordion">
-    <div class="accordion-body">
-      Creare un ambiente sicuro, stabile e adatto al benessere del tuo pitone reale, facile da gestire per
-      allevatori e appassionati.
-    </div>
-  </div>
-</div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regiusTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#regiusCollapseTwo" aria-expanded="false" aria-controls="regiusCollapseTwo">
+                  2. Dove ospitarlo: Box o Terrario?
+                </button>
+              </h2>
+              <div id="regiusCollapseTwo" class="accordion-collapse collapse" aria-labelledby="regiusTwo"
+                data-bs-parent="#pythonGuide">
+                <div class="accordion-body">
+                  <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
+                  <strong>Terrario:</strong> più estetico ma richiede più manutenzione. Minimo 100×60×50 cm.
+                </div>
+              </div>
+            </div>
 
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingTwo">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-      aria-expanded="false" aria-controls="collapseTwo">
-      2. Dove ospitarlo: Box o Terrario?
-    </button>
-  </h2>
-  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-    data-bs-parent="#careGuideAccordion">
-    <div class="accordion-body">
-      <strong>Rack:</strong> ideale per allevatori. Baby: 40×25×10 cm, Adulto: 70–80×50×20 cm.<br>
-      <strong>Terrario:</strong> più estetico ma richiede più manutenzione. Minimo 100×60×50 cm.
-    </div>
-  </div>
-</div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regiusThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#regiusCollapseThree" aria-expanded="false" aria-controls="regiusCollapseThree">
+                  3. Temperatura
+                </button>
+              </h2>
+              <div id="regiusCollapseThree" class="accordion-collapse collapse" aria-labelledby="regiusThree"
+                data-bs-parent="#pythonGuide">
+                <div class="accordion-body">
+                  Zona calda: 31–32°C<br>
+                  Zona fresca: 26–27°C<br>
+                  Usa tappetini o cavi con termostato (posiziona la sonda tra fonte calda e fondo).
+                </div>
+              </div>
+            </div>
 
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingThree">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-      aria-expanded="false" aria-controls="collapseThree">
-      3. Temperatura
-    </button>
-  </h2>
-  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-    data-bs-parent="#careGuideAccordion">
-    <div class="accordion-body">
-      Zona calda: 31–32°C<br>
-      Zona fresca: 26–27°C<br>
-      Usa tappetini o cavi con termostato (posiziona la sonda tra fonte calda e fondo).
-    </div>
-  </div>
-</div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regiusFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#regiusCollapseFour" aria-expanded="false" aria-controls="regiusCollapseFour">
+                  4. Umidità e Acqua
+                </button>
+              </h2>
+              <div id="regiusCollapseFour" class="accordion-collapse collapse" aria-labelledby="regiusFour"
+                data-bs-parent="#pythonGuide">
+                <div class="accordion-body">
+                  Umidità: 55–65%, durante la muta 70–75%<br>
+                  Acqua sempre disponibile in una ciotola ampia e pulita.
+                </div>
+              </div>
+            </div>
 
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingFour">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-      aria-expanded="false" aria-controls="collapseFour">
-      4. Umidità e Acqua
-    </button>
-  </h2>
-  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-    data-bs-parent="#careGuideAccordion">
-    <div class="accordion-body">
-      Umidità: 55–65%, durante la muta 70–75%<br>
-      Acqua sempre disponibile in una ciotola ampia e pulita.
-    </div>
-  </div>
-</div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regiusFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#regiusCollapseFive" aria-expanded="false" aria-controls="regiusCollapseFive">
+                  5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
+                </button>
+              </h2>
+              <div id="regiusCollapseFive" class="accordion-collapse collapse" aria-labelledby="regiusFive"
+                data-bs-parent="#pythonGuide">
+                <div class="accordion-body">
+                  <ul>
+                    <li><strong>Substrato:</strong> Scottex per cuccioli, fibra di cocco per adulti</li>
+                    <li><strong>Arredi:</strong> almeno 2 rifugi, rami bassi e foglie finte</li>
+                    <li><strong>Pulizia:</strong> quotidiana per feci, settimanale per substrato, mensile per disinfezione</li>
+                    <li><strong>Quarantena:</strong> minimo 60 giorni con osservazione</li>
+                    <li><strong>Segnali salute:</strong> mute intere, appetito regolare, comportamento calmo</li>
+                    <li><strong>Adattamenti:</strong> ogni esemplare è diverso</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingFive">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
-      aria-expanded="false" aria-controls="collapseFive">
-      5–10. Substrato, Arredi, Pulizia, Quarantena, Segnali, Adattamenti
-    </button>
-  </h2>
-  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-    data-bs-parent="#careGuideAccordion">
-    <div class="accordion-body">
-      <ul>
-        <li><strong>Substrato:</strong> Scottex per i cuccioli, fibra di cocco per adulti</li>
-        <li><strong>Arredi:</strong> almeno 2 rifugi, rami bassi e foglie finte</li>
-        <li><strong>Pulizia:</strong> quotidiana per feci, settimanale per substrato, mensile per disinfezione</li>
-        <li><strong>Quarantena:</strong> minimo 60 giorni con monitoraggio attento</li>
-        <li><strong>Segnali salute:</strong> mute complete, appetito regolare, comportamento calmo e vigile</li>
-        <li><strong>Adattamenti:</strong> ogni esemplare è diverso, osserva sempre il comportamento</li>
-      </ul>
-    </div>
-  </div>
-</div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="regiusSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#regiusCollapseSix" aria-expanded="false" aria-controls="regiusCollapseSix">
+                  Schema di Alimentazione
+                </button>
+              </h2>
+              <div id="regiusCollapseSix" class="accordion-collapse collapse" aria-labelledby="regiusSix"
+                data-bs-parent="#pythonGuide">
+                <div class="accordion-body">
+                  <strong>Frequenza pasti:</strong><br>
+                  Cuccioli: ogni 5–7 giorni<br>
+                  Adulti: ogni 10–14 giorni<br><br>
+                  <strong>Tipo di prede:</strong><br>
+                  Pinkies, topi, ratti baby/adulti<br><br>
+                  <strong>Modalità:</strong><br>
+                  Prede decongelate, usa pinze, una preda per pasto
+                </div>
+              </div>
+            </div>
 
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingSix">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
-      aria-expanded="false" aria-controls="collapseSix">
-      Schema di Alimentazione
-    </button>
-  </h2>
-  <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-    data-bs-parent="#careGuideAccordion">
-    <div class="accordion-body">
-      <strong>Frequenza pasti:</strong><br>
-      Cuccioli: ogni 5–7 giorni<br>
-      Adulti: ogni 10–14 giorni<br><br>
-
-      <strong>Tipo di prede:</strong><br>
-      Cuccioli: pinkies / fuzzies<br>
-      Giovani: topi adulti piccoli / ratti baby<br>
-      Adulti: ratti adulti<br><br>
-
-      <strong>Modalità di somministrazione:</strong><br>
-      - Prede decongelate e riscaldate<br>
-      - Usa sempre pinze, mai a mano<br>
-      - Una preda per pasto, riprova dopo 1–2 settimane se rifiuta<br><br>
-
-      <strong>Glossario:</strong><br>
-      <em>Pinkies:</em> topolini neonati senza pelo<br>
-      <em>Fuzzies:</em> topolini con pelo leggero
-    </div>
-  </div>
-</div>
-          </div>
+          </div> <!-- fine pythonGuide -->
         </div>
       </div>
+    </div>
 
+    <!-- Guttatus -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="guttatusHeader">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guttatus"
+          aria-expanded="false" aria-controls="guttatus">
+          🐍 Guida alla Cura del Serpente del Grano (Pantherophis guttatus)
+        </button>
+      </h2>
+      <div id="guttatus" class="accordion-collapse collapse" aria-labelledby="guttatusHeader">
+        <div class="accordion-body">
+          <div class="accordion" id="guttatusGuide">
 
-         <!-- Guttatus -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="guttatusHeader">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#guttatus" aria-expanded="false" aria-controls="guttatus">
-            🐍 Guida alla Cura del Serpente del Grano (Pantherophis guttatus)
-          </button>
-        </h2>
-        <div id="guttatus" class="accordion-collapse collapse" aria-labelledby="guttatusHeader" data-bs-parent="#careGuideAccordion">
-          <div class="accordion-body">
-            <h5>1. Allestimento del Terrario</h5>
-            <ul>
-              <li>Cuccioli: min. 45x30x30 cm</li>
-              <li>Adulti: min. 90x45x45 cm</li>
-              <li>Substrato: aspen, cocco, carta, NO pino/cedro</li>
-              <li>Nascondigli obbligatori (zona calda + fredda)</li>
-              <li>Decorazioni: rami, cortecce, piante</li>
-            </ul>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="guttatusOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#guttatusCollapseOne" aria-expanded="true" aria-controls="guttatusCollapseOne">
+                  1. Allestimento del Terrario
+                </button>
+              </h2>
+              <div id="guttatusCollapseOne" class="accordion-collapse collapse show" aria-labelledby="guttatusOne"
+                data-bs-parent="#guttatusGuide">
+                <div class="accordion-body">
+                  Cuccioli: min. 45x30x30 cm<br>
+                  Adulti: min. 90x45x45 cm<br>
+                  Substrato: aspen, cocco, carta<br>
+                  Nascondigli obbligatori in zona calda e fredda<br>
+                  Aggiungi rami, cortecce e piante
+                </div>
+              </div>
+            </div>
 
-            <h5>2. Temperatura e Umidità</h5>
-            <ul>
-              <li>Zona calda: 29–31 °C | fredda: 21–25 °C | notte: 18–20 °C</li>
-              <li>Umidità: 50–60%, 65–75% in muta</li>
-              <li>Usare termostato, termometri e igrometro</li>
-            </ul>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="guttatusTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#guttatusCollapseTwo" aria-expanded="false" aria-controls="guttatusCollapseTwo">
+                  2. Temperatura e Umidità
+                </button>
+              </h2>
+              <div id="guttatusCollapseTwo" class="accordion-collapse collapse" aria-labelledby="guttatusTwo"
+                data-bs-parent="#guttatusGuide">
+                <div class="accordion-body">
+                  Zona calda: 29–31°C<br>
+                  Zona fredda: 21–25°C<br>
+                  Notte: 18–20°C<br>
+                  Umidità: 50–60% (65–75% in muta)
+                </div>
+              </div>
+            </div>
 
-            <h5>3. Alimentazione</h5>
-            <ul>
-              <li>Prede scongelate (topi o pulcini)</li>
-              <li>Cuccioli: ogni 5–7 giorni | Adulti: ogni 7–14</li>
-              <li>Mai prede vive, meglio somministrare in box separato</li>
-            </ul>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="guttatusThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#guttatusCollapseThree" aria-expanded="false" aria-controls="guttatusCollapseThree">
+                  3. Alimentazione
+                </button>
+              </h2>
+              <div id="guttatusCollapseThree" class="accordion-collapse collapse" aria-labelledby="guttatusThree"
+                data-bs-parent="#guttatusGuide">
+                <div class="accordion-body">
+                  Cuccioli: ogni 5–7 giorni<br>
+                  Adulti: ogni 7–14 giorni<br>
+                  Usa prede scongelate<br>
+                  Somministrale in un contenitore separato
+                </div>
+              </div>
+            </div>
 
-            <h5>4. Muta</h5>
-            <p>Durante la muta offri più umidità e non manipolarlo. Verifica che la pelle venga via completamente.</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="guttatusFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#guttatusCollapseFour" aria-expanded="false" aria-controls="guttatusCollapseFour">
+                  4. Muta
+                </button>
+              </h2>
+              <div id="guttatusCollapseFour" class="accordion-collapse collapse" aria-labelledby="guttatusFour"
+                data-bs-parent="#guttatusGuide">
+                <div class="accordion-body">
+                  Aumenta l’umidità<br>
+                  Non manipolarlo<br>
+                  Controlla che la muta sia intera (occhi e coda)
+                </div>
+              </div>
+            </div>
 
-            <h5>5. Manipolazione</h5>
-            <p>Attendi 5–7 giorni post acquisto. Mai toccare entro 24h dopo un pasto. Movimenti lenti e delicati.</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="guttatusFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#guttatusCollapseFive" aria-expanded="false" aria-controls="guttatusCollapseFive">
+                  5. Manipolazione e Pulizia
+                </button>
+              </h2>
+              <div id="guttatusCollapseFive" class="accordion-collapse collapse" aria-labelledby="guttatusFive"
+                data-bs-parent="#guttatusGuide">
+                <div class="accordion-body">
+                  Attendi 5–7 giorni prima di toccarlo<br>
+                  Non manipolarlo entro 24h dal pasto<br>
+                  Pulizia feci quotidiana<br>
+                  Disinfezione completa ogni mese
+                </div>
+              </div>
+            </div>
 
-            <h5>6. Pulizia</h5>
-            <p>Rimuovi feci ogni giorno, pulizia totale ogni mese con disinfettante per rettili.</p>
-          </div>
+          </div> <!-- fine guttatusGuide -->
         </div>
       </div>
-               </div>
-
-</div>                           
+    </div>
+  </div>
+</div>
         `;
                         break;
 
